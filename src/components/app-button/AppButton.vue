@@ -97,7 +97,7 @@ $colorVars: (
   background-color: map-get(map-get($colorVars, $color), "main");
   border-color: map-get(map-get($colorVars, $color), "main");
 
-  &:hover {
+  &:hover, &:focus {
     background-color: map-get(map-get($colorVars, $color), "hover");
     border-color: map-get(map-get($colorVars, $color), "hover");
   }
@@ -108,7 +108,7 @@ $colorVars: (
   border-color: map-get(map-get($colorVars, $color), "main");
   color: map-get(map-get($colorVars, $color), "main");
 
-  &:hover {
+  &:hover, &:focus {
     background-color: lighten(map-get(map-get($colorVars, $color), "main"), 50%);
     border-color: map-get(map-get($colorVars, $color), "hover");
   }
@@ -124,6 +124,7 @@ $colorVars: (
   font-weight: 600;
   display: inline-block;
   min-width: 100px;
+  margin: 5px;
 
   &-size {
     &--small {
