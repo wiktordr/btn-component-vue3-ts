@@ -1,18 +1,32 @@
+<script lang="ts" setup>
+import AppButton from "@/components/app-button/AppButton.vue";
+
+const onClick = (event: MouseEvent) => {
+  console.log(event)
+}
+</script>
+
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <AppButton color="red" @click="onClick">
+      Text text text text text text
+    </AppButton>
+
+    <AppButton
+      size="large"
+      color="red"
+      disabled
+    >
+      Text
+    </AppButton>
+
+    <AppButton
+      variant="outline"
+      size="small"
+      to="/about"
+      block
+    >
+      Go to about
+    </AppButton>
   </div>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-
-export default defineComponent({
-  name: 'HomeView',
-  components: {
-    HelloWorld,
-  },
-});
-</script>
